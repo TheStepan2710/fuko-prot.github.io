@@ -1,0 +1,36 @@
+/* FUKO base — global resets and document defaults.
+   Applied to consuming pages via styles.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semibold);
+  color: var(--fg);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: var(--text-h1); line-height: var(--leading-tight); }
+h2 { font-size: var(--text-h2); line-height: var(--leading-tight); }
+h3 { font-size: var(--text-h3); line-height: var(--leading-snug); }
+h4 { font-size: var(--text-h4); line-height: var(--leading-snug); }
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::selection { background: var(--brand-soft); color: var(--primary-active); }
+
+@keyframes fuko-spin { to { transform: rotate(360deg); } }
+@keyframes fuko-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+@keyframes fuko-fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
