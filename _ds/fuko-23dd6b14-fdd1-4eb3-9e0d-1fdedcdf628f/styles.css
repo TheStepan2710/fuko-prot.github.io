@@ -1,7 +1,0 @@
-/* FUKO Design System — global stylesheet entry point.
-   Consumers link THIS file. It is an @import manifest only. */
-
-@import './tokens/fig-tokens.css';   /* raw Figma Variables (colors, shadows, type, spacing, radii — all modes) */
-@import './tokens/fonts.css';        /* Onest + Bitter webfonts + family stacks */
-@import './tokens/aliases.css';      /* friendly semantic roles + px-resolved scales */
-@import './tokens/base.css';         /* document resets + element defaults */
